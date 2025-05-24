@@ -21,7 +21,7 @@
         margin-top: 32px;
         font-size: 2.2rem;
         letter-spacing: 1px;
-        color: #ffb347;
+        color: #4fc3f7;
         text-shadow: 0 2px 8px #0008;
       }
       .video-container {
@@ -46,7 +46,7 @@
         gap: 12px;
       }
       .sync-btn {
-        background: linear-gradient(90deg, #ffb347 0%, #ffcc80 100%);
+        background: linear-gradient(90deg, #4fc3f7 0%, #81d4fa 100%);
         color: #222;
         border: none;
         border-radius: 8px;
@@ -58,7 +58,7 @@
         transition: background 0.2s, transform 0.1s;
       }
       .sync-btn:hover {
-        background: linear-gradient(90deg, #ffd580 0%, #ffb347 100%);
+        background: linear-gradient(90deg, #81d4fa 0%, #4fc3f7 100%);
         transform: translateY(-2px) scale(1.04);
       }
       @media (max-width: 700px) {
@@ -77,14 +77,14 @@
     <div class="video-container">
       <video id="video" width="640" controls muted autoplay>
         <source
-          src="https://drive.google.com/file/d/1VDNqwx9nxeY491DHaJP4Cipw_gWMMsBj/view?usp=sharing"
+          src="{{ url_for('static', filename='My Future You W Audio.mp4') }}"
           type="video/mp4"
         />
         Your browser does not support the video tag.
       </video>
-      <div class="controls">
+      <!-- <div class="controls">
         <button class="sync-btn" onclick="resyncVideo()">🔄 Sync Video</button>
-      </div>
+      </div> -->
     </div>
     <script>
       const socket = io();
